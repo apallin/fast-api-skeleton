@@ -1,0 +1,14 @@
+name: fastapiskeleton
+
+services:
+  api:
+    build:
+      context: .
+      target: base-image
+    container_name: api
+    environment:
+      PORT: 8000
+    ports:
+      - '8000:8000'
+    restart: "no"
+    command: fastapi run app/main.py --port ${PORT}

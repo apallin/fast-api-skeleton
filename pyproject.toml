@@ -12,14 +12,8 @@ httpx = "^0.27.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.8.0"
-poethepoet = "^0.27.0"
 pytest = "^8.3.2"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.poe.tasks]
-test = "pytest tests/"
-serve-dev = "fastapi dev"
-serve-prod = "fastapi run"
